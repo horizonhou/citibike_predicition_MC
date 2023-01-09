@@ -12,3 +12,16 @@ We adopt the 10 minutes discrete time block, implying 48 time blocks for each da
 #### New method:
 We attempted to use a new approach to estimate the transition matrix. We tried to model the transition probability matrix for each time interval, and then do matrix multiplication to all of these matrices to get the transition probabilities from each start of the morning/evening to end of the morning/evening. However, this method does not work well because our data set is not large enough to support such small segmentation of time.
 
+#### Stationary distribution & Analysis
+![image1](images/SD_CP_M.png)
+![image1](images/SD_CP_E.png)
+![image1](images/SD_BW_M.png)
+![image1](images/SD_BW_E.png)
+![image1](images/SD_BE_M.png)
+![image1](images/SD_BE_E.png)
+
+The stationary distribution tells us that in the morning, for all of the three stations, they all have very high availabilities around 15 to 17.5, which is reasonable because the Citibike staff will restock the bikes at morning. In addition, for these popular stations where the flow in exceeds flow out in the morning as people who work nearby and many tourists ride their bikes in. 
+
+In the evening, in contrast to the morning, there are fewer bikes available at stations as the bike flow out exceeds flow in as people who work nearby and tourists ride their bikes out.
+
+So we can say that all three stations tend to have many bikes at noon, and very few bikes in the evening.
